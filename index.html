@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho - Agro Forte e Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">AGRO <span>SUSTENTÁVEL</span></div>
+
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">O Projeto</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#calculadora">Simulador</a></li>
+                <li><a href="#quiz">Quiz Agro</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Agro Forte e Sustentável</h1>
+            <p>
+                Descubra como a tecnologia e a preservação transformam o campo
+                e garantem o futuro do planeta.
+            </p>
+            <a href="#sobre" class="btn">Explorar o Campo</a>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="dashboard container">
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="30">0</h3>
+            <p>% do território brasileiro preservado por produtores rurais</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>+ de 100 países alimentados pelo Agro do Brasil</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="25">0</h3>
+            <p>% dos empregos do país gerados pelo setor do campo</p>
+        </div>
+
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="about-section container">
+
+        <div class="about-grid">
+
+            <div class="about-text">
+                <h2>Projeto Agrinho: A Força da Sustentabilidade</h2>
+
+                <p>
+                    O cenário atual exige produzir mais com menos recursos.
+                    O conceito de <strong>Agro Forte e Sustentável</strong>
+                    prova que é possível bater recordes de colheita enquanto
+                    protegemos as florestas e economizamos água.
+                </p>
+
+                <p>
+                    O uso do plantio direto, rotação de culturas e a integração
+                    lavoura-pecuária-floresta (ILPF) são exemplos reais de que
+                    a ciência brasileira trabalha em favor da natureza.
+                </p>
+            </div>
+
+            <img class="about-img"
+                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=600&q=80"
+                alt="Tecnologia no campo">
+
+        </div>
+
+    </section>
+
+    <!-- Tecnologia -->
+    <section id="tecnologia" class="tech-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Inovações que Protegem o Planeta</h2>
+
+            <div class="tab-container">
+
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'drones')">
+                        🛰️ Drones e Satélites
+                    </button>
+
+                    <button class="tab-btn" onclick="openTab(event, 'biologicos')">
+                        🐛 Defensivos Biológicos
+                    </button>
+
+                    <button class="tab-btn" onclick="openTab(event, 'irrigacao')">
+                        💧 Irrigação Inteligente
+                    </button>
+                </div>
+
+                <div id="drones" class="tab-content active">
+                    <h3>Monitoramento de Precisão</h3>
+                    <p>
+                        Com drones e imagens de satélite, o produtor identifica
+                        exatamente quais plantas precisam de água ou cuidados.
+                        Isso evita desperdícios e aumenta a eficiência.
+                    </p>
+                </div>
+
+                <div id="biologicos" class="tab-content">
+                    <h3>Ciência Contra Pragas</h3>
+                    <p>
+                        O controle biológico utiliza organismos benéficos para
+                        combater pragas agrícolas, reduzindo o uso de produtos
+                        químicos e preservando o meio ambiente.
+                    </p>
+                </div>
+
+                <div id="irrigacao" class="tab-content">
+                    <h3>Cada Gota Conta</h3>
+                    <p>
+                        Sensores inteligentes monitoram a umidade do solo e
+                        acionam a irrigação apenas quando necessário, reduzindo
+                        significativamente o consumo de água.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Simulador -->
+    <section id="calculadora" class="calc-section container">
+
+        <h2 class="section-title">Simulador: Atitudes Sustentáveis</h2>
+
+        <p style="text-align:center; margin-bottom:20px;">
+            Marque as ações que você pratica e descubra seu impacto positivo.
+        </p>
+
+        <div class="calc-box">
+
+            <label>
+                <input type="checkbox" id="check-agua" onchange="calcularImpacto()">
+                Não desperdiço comida no prato
+            </label>
+
+            <label>
+                <input type="checkbox" id="check-recicla" onchange="calcularImpacto()">
+                Separo o lixo orgânico do reciclável
+            </label>
+
+            <label>
+                <input type="checkbox" id="check-local" onchange="calcularImpacto()">
+                Consumo produtos produzidos na minha região
+            </label>
+
+            <div class="calc-result">
+                <h4>Seu Impacto Estimado:</h4>
+                <p>
+                    <span id="resultado-recurso">0</span>
+                    kg/L de recursos preservados por ano!
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="quiz-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Jogo do Agro Conectado</h2>
+
+            <div class="quiz-box">
+
+                <div id="question-container">
+                    <p id="question">Carregando pergunta...</p>
+                    <div id="answer-buttons" class="btn-grid"></div>
+                </div>
+
+                <div id="score-container" class="hide">
+                    <h3>Parabéns! Você concluiu o Quiz.</h3>
+                    <p id="score-text"></p>
+
+                    <button class="btn" onclick="restartQuiz()">
+                        Jogar Novamente
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Agrinho - Agro Forte e Sustentável.
+                Conscientização, inovação e tecnologia para um futuro melhor.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>s
